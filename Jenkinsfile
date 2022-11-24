@@ -28,7 +28,7 @@ pipeline {
         }
          stage ('TEST on firefox') {
            steps {
-             echo "this is test stage on firefox"
+             echo "thisis test stage on firefox"
              sh "sleep 5"
            }
         }  
