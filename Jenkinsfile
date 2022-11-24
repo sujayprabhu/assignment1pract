@@ -1,21 +1,18 @@
 pipeline {
   agent any; 
-  environment {
-    NAME = 'sujay'
-  }
   parameters {
-  string defaultValue: '1234', description: 'Practicing the assignment', name: 'sujay', trim: true
-    booleanParam description: 'this is a practice file', name: 'jenkin'
-  choice choices: ['false or true'], description: 'this is a example', name: 'redhat'
-  file 'd location'
-  credentials credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl', defaultValue: '', description: 'practice', name: 'mastercard', required: false
+    string defaultValue: '12334', description: 'ngfvgjkhjlkvhf', name: 'sujay', trim: true 
+    credentials credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl', defaultValue: '', name: 'banking', required: false
+  file ''
+  choice choices: ['master slave', 'main1', 'main0'], name: 'branch'
+  password defaultValue: '1234567', name: 'passcode'
   } 
   stages {
         stage ('BUILD') {
   steps {
             git(
-               'https://github.com/sujayprabhu/assignment1pract.git'
-            )   
+                  'https://github.com/sujayprabhu/java-sample.git' 
+                )   
          sh '''
             mvn clean package
             '''
