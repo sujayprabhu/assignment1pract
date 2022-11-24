@@ -10,7 +10,7 @@ pipeline {
         stage ('BUILD') {
   steps {
             git(
-            credentialsId: 'f086fa91-c575-4c18-897c-2d5c3b69cffc', url: 'https://github.com/sujayprabhu/assignment1pract.git'
+               'https://github.com/sujayprabhu/assignment1pract.git'
             )   
          sh '''
             mvn clean package
