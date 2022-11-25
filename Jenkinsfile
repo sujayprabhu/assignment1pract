@@ -1,5 +1,7 @@
 pipeline {
-  agent any; 
+  agent {
+  label 'slave1'
+}
   parameters {
     string defaultValue: '12334', description: 'ngfvgjkhjlkvhf', name: 'sujay', trim: true 
     credentials credentialType: 'com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl', defaultValue: '', name: 'banking', required: false
